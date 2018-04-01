@@ -30,9 +30,14 @@ const StyledNavbarGroup = styled(NavbarGroup)`
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    
     a {
         flex: 1;
         text-align: center;
+        border-width: 2px;
+        border-style: solid;
+        border-color: red;
     }
 `;
 
@@ -67,19 +72,64 @@ class App extends Component {
         <Navbar>
             <StyledNavbarGroup>
                 <NavLink to='/'>Home</NavLink>
-                <Popover minimal interactionKind={PopoverInteractionKind.HOVER} position={Position.DOWN} content={
-                    <MaterialsDropDown>
-                        <Link to='/materials/wood'>Wood</Link>
-                        <Link to='/materials/metal'>Metal</Link>
-                        <Link to='/materials/glass'>Glass</Link>
-                        <Link to='/materials/paper'>Paper</Link>
-                    </MaterialsDropDown>
-                    } target={<NavLink to='/materials'>Materials</NavLink>} />
-                <NavLink to='/style'>Style</NavLink>
-                <NavLink to='/genre'>Genre</NavLink>
-                <NavLink to='/year'>Year</NavLink>
+                
+                <Popover minimal 
+                    interactionKind={PopoverInteractionKind.HOVER} 
+                    position={Position.TOP} 
+                    content={
+                        <MaterialsDropDown>
+                            <Link to='/materials/wood'>Wood</Link>
+                            <Link to='/materials/metal'>Metal</Link>
+                            <Link to='/materials/glass'>Glass</Link>
+                            <Link to='/materials/paper'>Paper</Link>
+                            <Link to='/materials/leather'>Leather</Link>
+                        </MaterialsDropDown>
+                    } 
+                    target={<NavLink to='/materials'>Materials</NavLink>} />
+                
+                <Popover minimal 
+                    interactionKind={PopoverInteractionKind.HOVER} 
+                    position={Position.TOP} 
+                    content={
+                        <MaterialsDropDown>
+                            <Link to='/style/painting'>Painting</Link>
+                            <Link to='/style/blacksmithing'>Blacksmithing</Link>
+                            <Link to='/style/lampwork'>Lampwork</Link>
+                            <Link to='/style/propmaking'>Prop Making</Link>
+                            <Link to='/style/photography'>Photography</Link>
+                            <Link to='/style/woodworking'>Woodworking</Link>
+                            <Link to='/style/leatherworking'>Leatherworking</Link>
+                        </MaterialsDropDown>
+                    } 
+                    target={<NavLink to='/style'>Style</NavLink>} />
+                
+                <Popover minimal 
+                    interactionKind={PopoverInteractionKind.HOVER} 
+                    position={Position.TOP} 
+                    content={
+                        <MaterialsDropDown>
+                            <Link to='/genre/steampunk'>Steampunk</Link>
+                            <Link to='/genre/fallout'>Fallout</Link>
+                        </MaterialsDropDown>
+                    } 
+                    target={<NavLink to='/genre'>Genre</NavLink>} />
+                
+                <Popover minimal 
+                    interactionKind={PopoverInteractionKind.HOVER} 
+                    position={Position.TOP} 
+                    content={
+                        <MaterialsDropDown>
+                            <Link to='/year/1990_1999'>1990 - 1999</Link>
+                            <Link to='/year/2000_2009'>2000 - 2009</Link>
+                            <Link to='/year/2010_2014'>2010 - 2014</Link>
+                            <Link to='/year/2015_present'>2015 - present</Link>
+                        </MaterialsDropDown>
+                    } 
+                    target={<NavLink to='/year'>Year</NavLink>} />
+
             </StyledNavbarGroup>
         </Navbar>
+
         <Switch>
           <Route path="/materials" component={Materials} />
           <Route path="/style" component={Style} />

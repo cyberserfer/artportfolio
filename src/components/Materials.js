@@ -9,7 +9,7 @@ class Materials extends Component {
     render() {
         return (
             <div>
-                <Intro>Stuff</Intro>
+                <Intro>When creating art there are many different types of materials a person can use to create.</Intro>
             </div>
         )
     } 
