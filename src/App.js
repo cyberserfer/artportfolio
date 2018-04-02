@@ -28,16 +28,12 @@ const Header = styled.div`
 const StyledNavbarGroup = styled(NavbarGroup)`
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    
-    
     a {
         flex: 1;
         text-align: center;
-        border-width: 2px;
-        border-style: solid;
-        border-color: red;
+        border: 2px solid red;
     }
 `;
 
@@ -54,7 +50,6 @@ const MaterialsDropDown = styled.div`
         justify-content: center;
         align-items: center;
         width: 100%;
-        flex: 1;
         &:hover {
             background: #ccc;
         }
@@ -71,7 +66,9 @@ class App extends Component {
         </Header>
         <Navbar>
             <StyledNavbarGroup>
-                <NavLink to='/'>Home</NavLink>
+                <div>
+                    <NavLink to='/'>Home</NavLink>
+                </div>
                 
                 <Popover minimal 
                     interactionKind={PopoverInteractionKind.HOVER} 
