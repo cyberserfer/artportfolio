@@ -16,6 +16,7 @@ import Year from './components/Year';
 import Home from './components/Home';
 
 
+
 const Header = styled.div`
     width: 100%;
     padding: 10px 20px;
@@ -69,10 +70,10 @@ class App extends Component {
                 <div>
                     <NavLink to='/'>Home</NavLink>
                 </div>
-                
-                <Popover minimal 
-                    interactionKind={PopoverInteractionKind.HOVER} 
-                    position={Position.TOP} 
+
+                <Popover minimal
+                    interactionKind={PopoverInteractionKind.HOVER}
+                    position={Position.TOP}
                     content={
                         <MaterialsDropDown>
                             <Link to='/materials/wood'>Wood</Link>
@@ -81,12 +82,12 @@ class App extends Component {
                             <Link to='/materials/paper'>Paper</Link>
                             <Link to='/materials/leather'>Leather</Link>
                         </MaterialsDropDown>
-                    } 
+                    }
                     target={<NavLink to='/materials'>Materials</NavLink>} />
-                
-                <Popover minimal 
-                    interactionKind={PopoverInteractionKind.HOVER} 
-                    position={Position.TOP} 
+
+                <Popover minimal
+                    interactionKind={PopoverInteractionKind.HOVER}
+                    position={Position.TOP}
                     content={
                         <MaterialsDropDown>
                             <Link to='/style/painting'>Painting</Link>
@@ -97,23 +98,23 @@ class App extends Component {
                             <Link to='/style/woodworking'>Woodworking</Link>
                             <Link to='/style/leatherworking'>Leatherworking</Link>
                         </MaterialsDropDown>
-                    } 
+                    }
                     target={<NavLink to='/style'>Style</NavLink>} />
-                
-                <Popover minimal 
-                    interactionKind={PopoverInteractionKind.HOVER} 
-                    position={Position.TOP} 
+
+                <Popover minimal
+                    interactionKind={PopoverInteractionKind.HOVER}
+                    position={Position.TOP}
                     content={
                         <MaterialsDropDown>
                             <Link to='/genre/steampunk'>Steampunk</Link>
                             <Link to='/genre/fallout'>Fallout</Link>
                         </MaterialsDropDown>
-                    } 
+                    }
                     target={<NavLink to='/genre'>Genre</NavLink>} />
-                
-                <Popover minimal 
-                    interactionKind={PopoverInteractionKind.HOVER} 
-                    position={Position.TOP} 
+
+                <Popover minimal
+                    interactionKind={PopoverInteractionKind.HOVER}
+                    position={Position.TOP}
                     content={
                         <MaterialsDropDown>
                             <Link to='/year/1990_1999'>1990 - 1999</Link>
@@ -121,7 +122,7 @@ class App extends Component {
                             <Link to='/year/2010_2014'>2010 - 2014</Link>
                             <Link to='/year/2015_present'>2015 - present</Link>
                         </MaterialsDropDown>
-                    } 
+                    }
                     target={<NavLink to='/year'>Year</NavLink>} />
 
             </StyledNavbarGroup>
