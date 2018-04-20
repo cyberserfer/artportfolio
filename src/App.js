@@ -34,7 +34,7 @@ const StyledNavbarGroup = styled(NavbarGroup)`
     a {
         flex: 1;
         text-align: center;
-        border: 2px solid red;
+        ${'' /* border: 2px solid red; */}
     }
 `;
 
