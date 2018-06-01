@@ -44,6 +44,25 @@ const MaterialsDropDown = styled.div`
     align-items: center;
     flex-direction: column;
     width: 200px;
+    height: 200px;
+    a {
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        &:hover {
+            background: #ccc;
+        }
+    }
+`;
+
+const StyleDropDown = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
     height: 250px;
     a {
         font-size: 16px;
@@ -89,7 +108,7 @@ class App extends Component {
                     interactionKind={PopoverInteractionKind.HOVER}
                     position={Position.TOP}
                     content={
-                        <MaterialsDropDown>
+                        <StyleDropDown>
                             <Link to='/style/painting'>Painting</Link>
                             <Link to='/style/blacksmithing'>Blacksmithing</Link>
                             <Link to='/style/lampwork'>Lampwork</Link>
@@ -97,7 +116,7 @@ class App extends Component {
                             <Link to='/style/photography'>Photography</Link>
                             <Link to='/style/woodworking'>Woodworking</Link>
                             <Link to='/style/leatherworking'>Leatherworking</Link>
-                        </MaterialsDropDown>
+                        </StyleDropDown>
                     }
                     target={<NavLink to='/style'>Style</NavLink>} />
 
